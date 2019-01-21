@@ -10,6 +10,15 @@ def flip_and_invert_image(image):
 
 print(flip_and_invert_image(image))
 
+#*MAP
+def flip_and_invert_image(image):
+    reversed_image = list(map(lambda row: row[::-1], image))
+    
+    result = list(map(lambda row: list(map(lambda el: 1 if el == 0 else 0, row)), reversed_image))
+    
+    return result
+
+print(flip_and_invert_image(image))
 
 
 #WORKING . . .
