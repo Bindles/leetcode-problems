@@ -20,6 +20,16 @@ def flip_and_invert_image(image):
 
 print(flip_and_invert_image(image))
 
+#* CONCISE
+def flip_and_invert_image(image):
+    reversed_image = [row[::-1] for row in image]
+    print(reversed_image)
+
+    result = [[1 - num for num in row] for row in reversed_image]
+
+    return result
+
+
 
 #WORKING . . .
 def flip_and_invert_image(image):
