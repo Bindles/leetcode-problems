@@ -1,5 +1,12 @@
 #* 832. Flipping an Image
 image = [[1,1,0],[1,0,1],[0,0,0]]
+#* SUPER ONELINER
+def flip_and_invert_image(image):
+    return [[1 - num for num in row[::-1]] for row in image]
+
+print(flip_and_invert_image(image))
+
+
 #*
 def flip_and_invert_image(image):
   reversed_image =[row[::-1] for row in image]
