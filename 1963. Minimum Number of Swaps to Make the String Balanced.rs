@@ -1,5 +1,6 @@
 // 1963. Minimum Number of Swaps to Make the String Balanced
 //s = "][]["
+//SOL
 impl Solution {
   pub fn min_swaps(s: String) -> i32 {
       let mut open_bracket_count = 0;
