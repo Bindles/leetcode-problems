@@ -1,5 +1,6 @@
 // 1963. Minimum Number of Swaps to Make the String Balanced
 //s = "][]["
+//SOL
 class Solution {
     public int minSwaps(String s) {
     int min=0;

@@ -5,7 +5,7 @@ s = "][]["
 def min_swaps(s)
   open_bracket_count = 0
   for char in s.chars do
-    
+
     if char == '['
       open_bracket_count+=1
     elsif open_bracket_count>0
@@ -19,8 +19,7 @@ p min_swaps(s)
 
 
 
-
-
+#WORKING . . .
 str="Hello"
 arr = str.split('')
 
