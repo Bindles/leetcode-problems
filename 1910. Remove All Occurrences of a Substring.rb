@@ -3,6 +3,15 @@ s = "daabcbaabcbc"; part = "abc"
 # @param {String} s
 # @param {String} part
 # @return {String}
+#* 2
+def remove_occurrences(s, part)
+  while s.include?(part)
+    s.sub!(part, '')
+  end
+  s
+end
+p remove_occurrences(s, part)
+
 #* 1
 def remove_occurrences(s, part)
   n = part.size
