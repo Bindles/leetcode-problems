@@ -13,3 +13,11 @@ impl Solution {
     }
 }
 
+fn main() {
+    let details = vec![
+        String::from("7868190130M7522"),
+        String::from("5303914400F9211"),
+        String::from("9273338290F4010"),
+    ];
+    println!("{}", Solution::count_seniors(details)); // Output: 2
+}
