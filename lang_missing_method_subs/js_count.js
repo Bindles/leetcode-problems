@@ -11,3 +11,21 @@ function count(val){
 console.log(
   nums.count(2)
 )
+
+Array.prototype.count = function(val) {
+  return this.filter(x => x === val).length;
+};
+
+// Example usage
+var nums = [1, 2, 3, 2, 4, 5];
+console.log(nums.count(2)); // Output: 2
+
+
+
+function count(array, val) {
+  return array.filter(x => x === val).length;
+}
+
+// Example usage
+var nums = [1, 2, 3, 2, 4, 5];
+console.log(count(nums, 2)); // Output: 2
