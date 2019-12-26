@@ -14,6 +14,32 @@ def shortest_to_char(s, c)
 end
 p shortest_to_char(s, c)
 
+#* SOL 2
+def shortest_to_char(s, c)
+  res=[]
+  p nums = s.each_char.with_index.filter_map {|char, i| i if char == c}
+  s.chars.each_index do |i|
+   p nums.map { |x| (x - i).abs }
+   res << nums.map { |x| (x - i).abs }.min
+  end
+  res
+end
+p shortest_to_char(s, c)
+
+#*SOL 2.1
+def shortest_to_char(s, c)
+  res = []
+  indices = s.each_char.with_index.filter_map { |char, i| i if char == c }
+  if indices.empty?
+    raise "Character '#{c}' not found in string"
+  end
+  s.chars.each_index do |i|
+    res << indices.map { |x| (x - i).abs }.min
+  end
+  res
+end
+p shortest_to_char(s, c)
+
 
 #* MISC/TEST
 number = 5
