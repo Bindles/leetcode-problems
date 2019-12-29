@@ -15,6 +15,17 @@ class Solution:
     
 print(Solution().shortestToChar(s,c))
 
-
+#*
+class Solution:
+    def shortestToChar(self, s: str, c: str) -> List[int]:
+      res = []
+      indices = [i for i, char in enumerate(s) if char == c]
+      
+      for i in range(len(s)):
+          res.append(min(abs(i - index) for index in indices))
+      
+      return res
+    
+print(Solution().shortestToChar(s,c))
 
         
