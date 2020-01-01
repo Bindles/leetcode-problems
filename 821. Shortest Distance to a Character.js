@@ -20,8 +20,4 @@ function shortestToChar(s, c) {
   
   return res;
 }
-
-// Example usage:
-const s = "loveleetcode";
-const c = "e";
 console.log(shortestToChar(s, c));  // Output: [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]
