@@ -1,3 +1,4 @@
+#PYTHON
 #* 821. Shortest Distance to a Character
 s = "loveleetcode"; c = "e"
 from typing import List
