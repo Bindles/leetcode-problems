@@ -6,9 +6,9 @@ s = "loveleetcode"; c = "e"
 #* SOL 1
 def shortest_to_char(s, c)
   res=[]
-  nums = s.each_char.with_index.filter_map {|char, i| i if char == c}
-  s.chars.each_index do |num|
-    res << (num -  nums.min_by {|x| (x - num).abs}).abs
+  char_indices = s.each_char.with_index.filter_map {|char, i| i if char == c}
+  s.chars.each_index do |index|
+    res << (index - char_indices.min_by {|x| (x - index).abs}).abs
   end
   res
 end
@@ -17,10 +17,10 @@ p shortest_to_char(s, c)
 #* SOL 2
 def shortest_to_char(s, c)
   res=[]
-  p nums = s.each_char.with_index.filter_map {|char, i| i if char == c}
+  p char_indices = s.each_char.with_index.filter_map {|char, i| i if char == c}
   s.chars.each_index do |i|
-   p nums.map { |x| (x - i).abs }
-   res << nums.map { |x| (x - i).abs }.min
+   p char_indices.map { |x| (x - i).abs }
+   res << char_indices.map { |x| (x - i).abs }.min
   end
   res
 end

@@ -6,10 +6,10 @@ from typing import List
 class Solution:
     def shortestToChar(self, s: str, c: str) -> List[int]:
         res = []
-        nums = [i for i, char in enumerate(s) if char == c]
+        char_indices = [i for i, char in enumerate(s) if char == c]
         
         for i in range(len(s)):
-            closest = min(nums, key=lambda x: abs(x - i))
+            closest = min(char_indices, key=lambda x: abs(x - i))
             res.append(abs(i - closest))
         
         return res
@@ -20,10 +20,10 @@ print(Solution().shortestToChar(s,c))
 class Solution:
     def shortestToChar(self, s: str, c: str) -> List[int]:
       res = []
-      indices = [i for i, char in enumerate(s) if char == c]
+      char_indices = [i for i, char in enumerate(s) if char == c]
       
       for i in range(len(s)):
-          res.append(min(abs(i - index) for index in indices))
+          res.append(min(abs(i - index) for index in char_indices))
       
       return res
     

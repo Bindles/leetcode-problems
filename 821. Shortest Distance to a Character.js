@@ -1,6 +1,6 @@
 // 821. Shortest Distance to a Character
 s = "loveleetcode"; c = "e"
-function shortestToChar(s, c) {
+var shortestToChar = function(s, c) {
   const res = [];
   const indices = [];
   
@@ -17,7 +17,6 @@ function shortestToChar(s, c) {
       }
       res.push(minDist);
   }
-  
   return res;
-}
+};
 console.log(shortestToChar(s, c));  // Output: [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]
