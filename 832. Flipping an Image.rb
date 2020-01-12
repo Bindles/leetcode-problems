@@ -7,6 +7,7 @@ def flip_and_invert_image(image)
     image.map(&:reverse).map { |row| row.map { |num| 1 - num } }
 end
 p flip_and_invert_image(image)
+
 #*
 def flip_and_invert_image(image)
     image.map(&:reverse).map do |ea|
