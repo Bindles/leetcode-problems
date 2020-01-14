@@ -1,17 +1,24 @@
 // 832. Flipping an Image
 image = [[1,1,0],[1,0,1],[0,0,0]]
-//SOL
-function flip(image) {
+//SOL 2
+var flipAndInvertImage = function(image) {
+  const reversed_image = image.map(row => row.reverse());
+  return reversed_image.map(sub => sub.map(num => 1 - num));
+};
+console.log(flipAndInvertImage(image))
+
+//SOL 1
+var flipAndInvertImage = function(image) {
   reversed_image = image.map(row => row.reverse());
   console.log(reversed_image)
   return reversed_image.map(sub => {
     return sub.map(num => num === 0 ? 1 : 0)
   })
 }
-console.log(flip(image))
+console.log(flipAndInvertImage(image))
 
 //WORKING . . . [UNSUCCESS]
-function flip(image) {
+var flipAndInvertImage = function(image) {
   reversed_image = image.map(row => row.reverse());
   console.log(reversed_image)
   reversed_image.map(sub => {
@@ -24,7 +31,7 @@ function flip(image) {
     })
   })
 }
-console.log(flip(image))
+console.log(flipAndInvertImage(image))
 
 //MISC
 let str="Hello"
