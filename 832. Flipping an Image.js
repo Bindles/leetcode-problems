@@ -7,7 +7,13 @@ var flipAndInvertImage = function(image) {
 };
 console.log(flipAndInvertImage(image))
 
-//SOL 1
+//SOL 1 CLEANED THEN ORIG
+var flipAndInvertImage = function(image) {
+  const reversed_image = image.map(row => row.reverse());
+  return reversed_image.map(sub => {
+    return sub.map(num => num === 0 ? 1 : 0)
+  })
+}
 var flipAndInvertImage = function(image) {
   reversed_image = image.map(row => row.reverse());
   console.log(reversed_image)
