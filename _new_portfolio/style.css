@@ -1,0 +1,20 @@
+/* Custom CSS for horizontal scrolling */
+.skills-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch; /* Enables momentum-based scrolling on iOS devices */
+}
+
+.skill-item {
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.skill-item img {
+    width: 64px;
+    height: 64px;
+}

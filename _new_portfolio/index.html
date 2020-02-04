@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.7.0/dist/flowbite.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for horizontal scrolling */
+        .skills-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            padding: 20px;
+            -webkit-overflow-scrolling: touch; /* Enables momentum-based scrolling on iOS devices */
+        }
+
+        .skill-item {
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .skill-item img {
+            width: 64px;
+            height: 64px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">Portfolio</a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <!-- Mobile Menu -->
+            <div class="hidden md:flex space-x-4" id="mobile-menu">
+                <a href="#about-me" class="hover:text-gray-300">About Me</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#skills" class="hover:text-gray-300">Skills</a>
+                <a href="#github" class="hover:text-gray-300">GitHub</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- About Me Section -->
+        <section id="about-me" class="mb-8 flex justify-center items-center">
+            <!-- Image -->
+            <img src="https://avatars.githubusercontent.com/u/9699261?v=4" alt="Profile Image" class="w-64 h-64 rounded-full mr-8">
+
+            <!-- Text with Typing Effect -->
+            <div class="text-center text-3xl text-black">
+                <p>Hello, I'm <b><span class="text-blue-400" id="name">Nicholas Turner</span></b></p>
+                <p>I'm a <b><span class="text-blue-400" id="profession"></span></b></p>
+            </div>
+        </section>
+
+        <!-- Description -->
+        <div class="text-center text-lg text-gray-800 mb-8 px-8">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum arcu sit amet ultricies fringilla.</p>
+            <p>Nullam id mi a mauris pulvinar varius ac eget eros. Integer tempus, ante nec volutpat tempor, est purus posuere lorem, ac ullamcorper eros arcu ac ante.</p>
+        </div>
+
+        <!-- Hire Me Button -->
+        <div class="flex justify-center mb-8">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline">Hire Me</button>
+        </div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-blue-500">
+            <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Placeholder for projects -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-8">
+            <h2 class="text-4xl font-bold mb-4 text-center">Skills</h2>
+            <div class="skills-container">
+                <script>
+                    const skills = [
+                        { name: 'CSS', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg' },
+                        { name: 'Ruby', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original-wordmark.svg' },
+                        { name: 'JavaScript', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+                        { name: 'React', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg' },
+                        { name: 'Rust', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg' },
+                        { name: 'Python', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg' },
+                        { name: 'PHP', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' },
+                        { name: 'Laravel', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg' },
+                        { name: 'MySQL', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg' },
+                        { name: 'PostgreSQL', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg' },
+                        { name: 'Linux', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg' },
+                        { name: 'PowerShell', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg' },
+                        { name: 'Bash', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg' },
+                        { name: 'Unity', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain-wordmark.svg' },
+                        { name: 'Postman', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original-wordmark.svg' }
+                    ];
+
+                    // Calculate the number of skills to show based on screen size
+                    const numSkillsToShow = Math.floor(window.innerWidth / 150); // Adjust 150 according to your preference
+
+                    // Clone skills array to create a looping effect
+                    const allSkills = [...skills, ...skills];
+
+                    // Create skill elements and append them to the container
+                    allSkills.forEach(skill => {
+                        const skillDiv = document.createElement('div');
+                        skillDiv.classList.add('skill-item');
+
+                        const skillImg = document.createElement('img');
+                        skillImg.src = skill.url;
+                        skillImg.alt = skill.name;
+
+                        const skillName = document.createElement('span');
+                        skillName.textContent = skill.name;
+                        skillName.classList.add('text-center', 'text-gray-800', 'text-lg', 'mt-2');
+
+                        skillDiv.appendChild(skillImg);
+                        skillDiv.appendChild(skillName);
+
+                        document.querySelector('.skills-container').appendChild(skillDiv);
+                    });
+
+                    // Function to scroll the skills container
+                    function scrollSkillsContainer() {
+                        const container = document.querySelector('.skills-container');
+                        container.scrollBy({ left: 1, behavior: 'smooth' });
+                    }
+
+                    // Start the scroll effect
+                    setInterval(scrollSkillsContainer, 50); // Adjust the interval and scroll amount as needed
+                </script>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="mb-8">
+            <h2 class="text-4xl font-bold mb-6 text-center">GitHub</h2>
+            <p class="text-gray-700 text-center">Placeholder text for your GitHub section...</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="text-4xl font-bold mb-6 text-center">Contact</h2>
+            <!-- Placeholder for contact form -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-xl">© 2024 Bindles Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // JavaScript for Typing Effect
+        const professions = ['Web Developer', 'Programmer', 'Web Designer', 'Ruby Expert'];
+        let professionIndex = 0;
+        let typingTimer;
+
+        function startTypingEffect() {
+            const professionElement = document.getElementById('profession');
+            const profession = professions[professionIndex];
+            const professionLength = profession.length;
+
+            let currentIndex = 0;
+            typingTimer = setInterval(() => {
+                if (currentIndex <= professionLength) {
+                    const partialProfession = profession.substring(0, currentIndex);
+                    professionElement.innerHTML = partialProfession;
+                    currentIndex++;
+                } else {
+                    clearInterval(typingTimer);
+                    setTimeout(() => {
+                        eraseTypingEffect();
+                    }, 1000);
+                }
+            }, 100);
+        }
+
+        function eraseTypingEffect() {
+            const professionElement = document.getElementById('profession');
+            const profession = professions[professionIndex];
+            const professionLength = profession.length;
+
+            let currentIndex = professionLength;
+            typingTimer = setInterval(() => {
+                if (currentIndex >= 0) {
+                    const partialProfession = profession.substring(0, currentIndex);
+                    professionElement.innerHTML = partialProfession;
+                    currentIndex--;
+                } else {
+                    clearInterval(typingTimer);
+                    professionIndex = (professionIndex + 1) % professions.length;
+                    setTimeout(() => {
+                        startTypingEffect();
+                    }, 500);
+                }
+            }, 100);
+        }
+
+        // Start typing effect
+        startTypingEffect();
+    </script>
+</body>
+</html>

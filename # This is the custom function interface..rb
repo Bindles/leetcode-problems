@@ -1,6 +1,6 @@
 #* 1237. Find Positive Integer Solution for a Given Equation
 function_id = 1; z = 5
-
+x   
 #	You should not implement it, or speculate about its implementation
 #	class CustomFunction:
 #		def f(self, x, y):
