@@ -23,4 +23,5 @@ var reverseParentheses = function(s) {
   return stack.join('');
 }
 console.log(reverseParentheses(s))
+console.log(reverseParentheses(s2))
   
