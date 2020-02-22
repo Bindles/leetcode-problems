@@ -4,14 +4,6 @@ s = "(u(love)i)"
 s2 = "(ed(et(oc))el)"
 # @param {String} s
 # @return {String}
-
-
-def reverse_parentheses(s)
-    s.gsub('(',' ').gsub(')',' ').split(' ').reverse.map(&:reverse)
-end
-p reverse_parentheses(s)
-p reverse_parentheses(s2)
-
 #*
 def reverse_parentheses(s)
   stack = []
@@ -112,7 +104,13 @@ p reverse_parentheses(s2)
 
 
 
-# WORKING . . .
+#* WORKING . . .
+def reverse_parentheses(s)
+  s.gsub('(',' ').gsub(')',' ').split(' ').reverse.map(&:reverse)
+end
+p reverse_parentheses(s)
+p reverse_parentheses(s2)
+
 # def reverse_parentheses(s)
 #   #end_index=0
 #     s.each_char.with_index do |char,i|
