@@ -18,7 +18,7 @@ impl Solution {
                       break;
                   }
               }
-              stack.pop(); // Remove the '('
+              stack.pop();
               stack.extend(temp.into_iter().rev());
           } else {
               stack.push(char.to_string());
@@ -27,3 +27,4 @@ impl Solution {
       stack.join("")
   }
 }
+
