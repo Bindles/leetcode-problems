@@ -53,3 +53,25 @@ impl Solution {
   }
 }
 
+//
+impl Solution {
+  pub fn reverse_parentheses(s: String) -> String {
+      let mut stack: Vec<String> = Vec::new();
+      let mut current_str = String::new();
+
+      for char in s.chars() {
+          match char {
+              '(' => {
+                  stack.push(current_str.clone());
+                  current_str.clear();
+              }
+              ')' => {
+                  let mut temp = stack.pop().unwrap().chars().rev().collect::<String>();
+                  current_str = stack.pop().unwrap() + &temp;
+              }
+              _ => current_str.push(char),
+          }
+      }
+      current_str
+  }
+}
