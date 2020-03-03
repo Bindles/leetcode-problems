@@ -3,6 +3,30 @@
 // = "(u(love)i)"
 // = "(ed(et(oc))el)"
 
+//HAD TO GET HELP :(
+//COULDNT SOLVE WITHOUGHT HELP
+
+//CORRECT SOL
+impl Solution {
+  pub fn reverse_parentheses(s: String) -> String {
+      fn inner_rev(chs: &mut std::str::Chars) -> String {
+          let mut res = String::new();
+          while let Some(c) = chs.next() {
+              if c == '(' {
+                  let s = inner_rev(chs);
+                  res = [res, s].concat();
+              } else if c == ')' {
+                  return res.chars().rev().collect::<String>();
+              } else {
+                  res.push(c);
+              }
+          }
+          return res;
+      }
+      inner_rev(&mut s.chars())
+  }
+}
+
 //WORKING
 //HAVING TROUBLE | INCORRECT
 
@@ -73,5 +97,28 @@ impl Solution {
           }
       }
       current_str
+  }
+}
+
+
+//
+impl Solution {
+  pub fn reverse_parentheses(s: String) -> String {
+      let mut stack = Vec::new();
+      for c in s.chars() {
+          if c == ')' {
+              let mut temp = Vec::new();
+              while let Some(top) = stack.pop() {
+                  if top == '(' {
+                      break;
+                  }
+                  temp.push(top);
+              }
+              stack.extend(temp.into_iter().rev());
+          } else {
+              stack.push(c);
+          }
+      }
+      stack.iter().collect()
   }
 }
