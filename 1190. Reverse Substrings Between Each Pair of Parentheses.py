@@ -4,31 +4,55 @@
 s = "(u(love)i)"
 s2 = "(ed(et(oc))el)"
 #*
-def reverse_parentheses(s):
-    stack = []
-    result = ''
-    for char in s:
-        if char == ')':
-            temp = ''
-            while stack and stack[-1] != '(':
-                temp = stack.pop() + temp
-            if stack:
-                stack.pop()  # remove the '('
-                stack.append(temp[::-1])  # Append the reversed substring to the stack
+class Solution:
+    def reverseParentheses(self, s: str) -> str:
+        stack = []
+        for char in s:
+            if char == ")":
+                temp = ""
+                while stack[-1] != "(":
+                    temp += stack.pop()
+                stack.pop()
+                for tch in temp:
+                    stack.append(tch)
             else:
-                result += temp  # If no opening parenthesis is found, append to the result directly
-        else:
-            stack.append(char)
-    while stack:
-        result += stack.pop()
-    return result
+                stack.append(char)
+        
+        return "".join(stack)
 
-print(reverse_parentheses(s))
-print(reverse_parentheses(s2))
+print(Solution().reverseParentheses(s))
+print(Solution().reverseParentheses(s2))
+
+
+#* ALMOST WORKS . . .
+#* SOL 1 | DOESNT QUITE WORK | SO CLOSE
+class Solution:
+    def reverseParentheses(self, s: str) -> str:
+        stack = []
+        result = ''
+        for char in s:
+            if char == ')':
+                temp = ''
+                while stack and stack[-1] != '(':
+                    temp = stack.pop() + temp
+                if stack:
+                    stack.pop() 
+                    stack.append(temp[::-1])  # Append the reversed substring to the stack
+                else:
+                    result += temp  # If no opening parenthesis is found, append to the result directly
+            else:
+                stack.append(char)
+        while stack:
+            result += stack.pop()
+        return result   
+
+print(Solution().reverseParentheses(s))
+print(Solution().reverseParentheses(s2))
+
 
 #* WORKING . . . [these dont work]
 #*
-def reverse_parentheses(s):
+def reverseParentheses(s):
     stack = []
     for char in s:
         if char == ')':
@@ -41,12 +65,12 @@ def reverse_parentheses(s):
             stack.append(char)
     return ''.join(stack)
 
-print(reverse_parentheses(s))
-print(reverse_parentheses(s2))
+print(reverseParentheses(s))
+print(reverseParentheses(s2))
 
 
 #*
-def reverse_parentheses(s):
+def reverseParentheses(s):
     stack = []
     for char in s:
         if char == ')':
@@ -59,11 +83,11 @@ def reverse_parentheses(s):
             stack.append(char)
     return ''.join(stack)
 
-print(reverse_parentheses(s))
-print(reverse_parentheses(s2))
+print(reverseParentheses(s))
+print(reverseParentheses(s2))
 
 #*
-def reverse_parentheses(s):
+def reverseParentheses(s):
     stack = []
     for char in s:
         if char == ')':
@@ -77,5 +101,5 @@ def reverse_parentheses(s):
             stack.append(char)
     return ''.join(stack)
 
-print(reverse_parentheses(s))
-print(reverse_parentheses(s2))
+print(reverseParentheses(s))
+print(reverseParentheses(s2))
