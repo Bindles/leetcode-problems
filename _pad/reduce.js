@@ -58,7 +58,7 @@ Output:
 /*
 In this case, we use an object as the initial accumulator value. We check if the accumulator already has a property for the current age. If not, we create an empty array for that age. Then, we push the current object into the corresponding age array. By the end, we have an object where the keys are the ages, and the values are arrays of people with that age.
 
-You can now also now the newer groupBy method, however, this tried and true classic is important to understand.
+You can now also know the newer groupBy method, however, this tried and true classic is important to understand.
 
 Use Case 4: Creating Lookup Maps
 My personal favorite is using reduce() to create lookup maps from arrays. It's a game-changer when it comes to performance and code readability. Stop using those slow find() or filter() calls.
