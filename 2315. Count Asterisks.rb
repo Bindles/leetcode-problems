@@ -3,6 +3,15 @@
 s = "yo|uar|e**|b|e***au|tifu|l"
 # @param {String} s
 # @return {Integer}
+#* SOL 1.1
+def count_asterisks(s)
+    res=0
+    s.split('|').each_with_index do |subs, i|
+        res += subs.count('*') if i.even?
+    end
+    res  
+end
+
 #*
 def count_asterisks(s)
     res=[]
