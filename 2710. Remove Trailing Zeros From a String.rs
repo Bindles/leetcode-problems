@@ -1,5 +1,6 @@
 // 2710. Remove Trailing Zeros From a String
 //num = "51230100"
+//SOL | RUST
 impl Solution {
   pub fn remove_trailing_zeros(num: String) -> String {
       let num_reversed: String = num.chars().rev().collect();

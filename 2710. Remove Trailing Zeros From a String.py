@@ -1,3 +1,4 @@
+#PYTHON
 #* 2710. Remove Trailing Zeros From a String
 num = "51230100"
 # @param {String} num
