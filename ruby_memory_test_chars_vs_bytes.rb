@@ -1,6 +1,6 @@
 require 'objspace'
 
-s = "aaaaslkdkldklajdlkasnd,asndandkjasdnadsdlskdlakdlasksfkjhfkdhfsdhfkjdfhjfh dskfdjfh dkfdsfksjdhf dskfhdfhjksfsdfhskjdf kbcs"
+s = "aaaaslkdkldklajdlkasn ndandkjasdnadsdlskdlakdlaskbcs"
 
 chars_array = s.chars
 bytes_array = s.bytes
