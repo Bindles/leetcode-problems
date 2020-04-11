@@ -16,6 +16,22 @@ def min_flips(target)
 end
 p min_flips(target)
 
+#* SOL 2
+def min_flips(target)
+    current_state = 0
+    count = 0
+  
+    target.each_char do |char|
+      if char.to_i != current_state
+        count += 1
+        current_state = char.to_i
+      end
+    end
+  
+    count
+end
+p min_flips(target)
+
   
 #* WORKING . . .
 #*
