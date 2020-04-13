@@ -1,5 +1,21 @@
 #* 1529. Minimum Suffix Flips
 target = "10111"
+#* SOL 3
+def min_flips(target)
+    current_state = "0"
+    count = 0
+    
+    target.each_char do |char|
+      if char != current_state
+        count += 1
+        current_state = char
+      end
+    end
+  
+    count
+end
+p min_flips(target)
+
 #* SOL 1
 def min_flips(target)
     current_state = "0"
