@@ -48,6 +48,12 @@ def min_flips(target)
 end
 p min_flips(target)
 
+#* SOL 4
+def min_flips(target)
+    target.scan(/0+|1+/).size-1 + target[0].to_i
+end
+p min_flips(target)
+
   
 #* WORKING . . .
 #*
