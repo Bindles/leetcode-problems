@@ -11,7 +11,6 @@ impl Solution {
               current_state = char;
           }
       }
-
       count
   }
 }
