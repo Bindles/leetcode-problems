@@ -16,3 +16,4 @@ var minFlips = function(target) {
   }
   return count
 };
+console.log(minFlips(target))
