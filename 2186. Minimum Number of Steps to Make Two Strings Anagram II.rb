@@ -16,3 +16,11 @@ def min_steps(s, t)
 end
 p min_steps(s, t)
 
+#*
+def min_steps(s, t)
+  t_char = t.chars.reject { |char| s.chars.tally.key?(char) }
+  s_char = s.chars.reject { |char| t.chars.tally.key?(char)}
+  s_char.size + t_char.size 
+end
+p min_steps(s, t)
+
