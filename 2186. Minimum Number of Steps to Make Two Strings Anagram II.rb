@@ -24,3 +24,10 @@ def min_steps(s, t)
 end
 p min_steps(s, t)
 
+#*
+def min_steps(s, t)
+  p t_char = t.chars.reject { |char| s.chars.include?(char) }
+  p s_char = s.chars.reject { |char| t.chars.include?(char)}  
+end
+p min_steps(s, t)
+
