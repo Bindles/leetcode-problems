@@ -31,3 +31,9 @@ def min_steps(s, t)
 end
 p min_steps(s, t)
 
+#*
+def min_steps(s, t)
+  t.chars.reject { |char| s.chars.include?(char) }.size + s.chars.reject { |char| t.chars.include?(char)}.size
+end
+p min_steps(s, t)
+
