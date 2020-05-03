@@ -19,6 +19,7 @@ def min_steps(s, t)
   end
   steps
 end
+p min_steps(s, t)
 
 
 #* WORKING . . .

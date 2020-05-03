@@ -5,27 +5,27 @@ s = "leetcode"; t = "coats"
 # @return {Integer}
 from collections import Counter
 #* SOLVED GOOD PROBLEM LEARNED SOME
-def minSteps(s, t):
-  s_count=Counter(s)
-  t_count=Counter(s)
-  steps=0
-  uniq_chars = set(s.count().union((s.count())))
+def min_steps(s: str, t: str) -> int:
+    s_count = Counter(s)
+    t_count = Counter(t)
+    steps = 0
 
-print(minSteps(s,t))
-# def min_steps(s, t)
-#   s_count = s.chars.tally
-#   t_count = t.chars.tally
-#   steps = 0
-#   # Collect all unique characters from both strings
-#   unique_chars = s_count.keys | t_count.keys
-  
-#   unique_chars.each do |char|
-#     # Calc the diffe in counts of each character
-#     s_char_count = s_count[char] || 0
-#     t_char_count = t_count[char] || 0
-#     steps += (s_char_count - t_char_count).abs
-#   end
-#   steps
-# end
+    unique_chars = set(s_count.keys()).union(set(t_count.keys()))
+
+    for char in unique_chars:
+        steps += abs(s_count[char] - t_count[char])
+
+    return steps
+
+# Test cases
+s1 = "leetcode"
+t1 = "coats"
+print(min_steps(s1, t1))  # Output: 7
+
+s2 = "night"
+t2 = "thing"
+print(min_steps(s2, t2))  # Output: 0
+
+
 
 
