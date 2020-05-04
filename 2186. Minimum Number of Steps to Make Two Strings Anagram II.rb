@@ -21,6 +21,31 @@ def min_steps(s, t)
 end
 p min_steps(s, t)
 
+#* CONCISE | SIMILAR TO PYTHON SOL USING COUNTER
+def min_steps(s, t)
+  s_count = s.chars.tally
+  t_count = t.chars.tally
+  steps = 0
+
+  # Collect all unique characters from both strings
+  (s_count.keys | t_count.keys).each do |char|
+    # Calculate the difference in counts of each character and accumulate the steps using fetch to assign 0 if
+    steps += (s_count.fetch(char, 0) - t_count.fetch(char, 0)).abs
+  end
+  steps
+end
+
+# Test cases
+s1 = "leetcode"
+t1 = "coats"
+puts min_steps(s1, t1)  # Output: 7
+
+s2 = "night"
+t2 = "thing"
+puts min_steps(s2, t2)  # Output: 0
+
+p min_steps(s, t)
+
 
 #* WORKING . . .
 #*
