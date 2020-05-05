@@ -29,8 +29,9 @@ def min_steps(s, t)
 
   # Collect all unique characters from both strings
   (s_count.keys | t_count.keys).each do |char|
-    # Calculate the difference in counts of each character and accumulate the steps using fetch to assign 0 if
+    # Calculate the absolute difference in counts of each character, using fetch to default to 0 if the character is missing in either string, and accumulate the steps
     steps += (s_count.fetch(char, 0) - t_count.fetch(char, 0)).abs
+
   end
   steps
 end
