@@ -82,3 +82,19 @@ def min_steps(s, t)
 end
 p min_steps(s, t)
 
+
+#* TASK
+#* HAVENT DONE A MANUAL TALLY IN YEARS OR SO LOL, LETS TRY
+p hash = {}
+s.each_char do |char|
+  hash[char] ||= 0
+  hash[char] +=1
+end
+p hash
+#* OR [concise]
+p myhash = Hash.new(0)
+s.each_char do |char|
+  myhash[char] += 1
+end
+p myhash
+
