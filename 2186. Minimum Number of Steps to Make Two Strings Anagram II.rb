@@ -87,7 +87,7 @@ p min_steps(s, t)
 #* HAVENT DONE A MANUAL TALLY IN YEARS OR SO LOL, LETS TRY
 p hash = {}
 s.each_char do |char|
-  hash[char] ||= 0
+  hash[char] ||= 0 #shorth 4 hash[char]=0 if hash[char].nil?;hash[char]+=1
   hash[char] +=1
 end
 p hash
