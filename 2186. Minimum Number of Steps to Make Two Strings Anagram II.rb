@@ -98,3 +98,44 @@ s.each_char do |char|
 end
 p myhash
 
+#* PYTHON
+#* Python (longhand):
+# hash = {}
+# for char in s:
+#     if char not in hash:
+#         hash[char] = 0
+#     hash[char] += 1
+
+#* Python (concise):
+# from collections import defaultdict
+
+# myhash = defaultdict(int)
+# for char in s:
+#     myhash[char] += 1
+
+#* JS
+# JavaScript (longhand):
+
+# let s = "example";
+# let hash = {};
+# for (let char of s) {
+#     if (!(char in hash)) {
+#         hash[char] = 0;
+#     }
+#     hash[char] += 1;
+# }
+
+# JavaScript (concise):
+
+# Given a string s
+# let s = "example";
+
+# Initialize an empty object
+# let myhash = {};
+
+# Iterate through each character in the string
+# for (let char of s) {
+#     myhash[char] = (myhash[char] || 0) + 1;
+# }
+
+# console.log(myhash);
