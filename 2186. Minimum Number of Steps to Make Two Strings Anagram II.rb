@@ -114,7 +114,7 @@ p myhash
 #     myhash[char] += 1
 
 #* JS
-# JavaScript (longhand):
+#* JavaScript (longhand):
 
 # let s = "example";
 # let hash = {};
@@ -125,8 +125,13 @@ p myhash
 #     hash[char] += 1;
 # }
 
-# JavaScript (concise):
+#* JavaScript (concise):
+# let myhash = {};
+# for (let char of s) {
+#     myhash[char] = (myhash[char] || 0) + 1;
+# }
 
+#* JS W COMMENTS
 # Given a string s
 # let s = "example";
 
@@ -139,3 +144,5 @@ p myhash
 # }
 
 # console.log(myhash);
+
+
