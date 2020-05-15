@@ -1,5 +1,7 @@
 #* 2186. Minimum Number of Steps to Make Two Strings Anagram II
 s = "leetcode"; t = "coats"
+#* LEARN => HASH TALLY HASH INIT
+#* MEM => myhash[char] = (myhash[char] || 0) + 1;(js)
 # @param {String} s
 # @param {String} t
 # @return {Integer}
