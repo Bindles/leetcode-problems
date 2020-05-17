@@ -13,17 +13,30 @@ s = "leetcode"; t = "coats"
  */
 //WORKING
 var minSteps = function(s, t) {
-    let steps = 0
-    s_count = {}
-    for (let char of s) {
+  let steps = 0;
+  let s_count = {};
+  for (let char of s) {
       s_count[char] = (s_count[char] || 0) + 1;
-    }
-    t_count = {}
-    for (let char of t) {
+  }
+  let t_count = {};
+  for (let char of t) {
       t_count[char] = (t_count[char] || 0) + 1;
-    }
+  }
+
+  // Collect all unique characters from both strings
+  let unique_chars = new Set(Object.keys(s_count).concat(Object.keys(t_count)));
+
+  unique_chars.forEach(char => {
+      steps += Math.abs((s_count[char] || 0) - (t_count[char] || 0));
+  });
+
+  return steps;
 };
-console.log(minSteps(s,t))
+console.log(minSteps(s, t)); // Output: 7
+
+s = "night";
+t = "thing";
+console.log(minSteps(s, t)); // Output: 0
 
 
 
