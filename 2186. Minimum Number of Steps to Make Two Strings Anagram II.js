@@ -71,5 +71,19 @@ s = "night";
 t = "thing";
 console.log(minSteps(s, t)); // Output: 0
 
+// LEARN / LESSON
+let s_count = {};
+for (let char of s) {
+    s_count[char] = (s_count[char] || 0) + 1;
+}
+let t_count = {};
+for (let char of t) {
+    t_count[char] = (t_count[char] || 0) + 1;
+}
 
-
+//2 WAYS OF unique_chars = s_count.keys | t_count.keys [ruby]
+// Collect all unique characters from both strings
+var uniq_chars = new Set(Object.keys(s_count).concat(Object.keys(t_count)));
+console.log(uniq_chars)
+var uniq_chars = new Set([...Object.keys(s_count), ...Object.keys(t_count)]);
+console.log(uniq_chars)
