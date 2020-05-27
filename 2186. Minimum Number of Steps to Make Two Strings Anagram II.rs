@@ -2,6 +2,8 @@
 // = "leetcode"; t = "coats"
 // LEARN => HASH TALLY HASH INIT
 // MEM => myhash[char] = (myhash[char] || 0) + 1;(js)
+
+//SOL
 use std::collections::HashMap;
 
 impl Solution {
@@ -28,4 +30,16 @@ impl Solution {
         }
         counter
     }
+}
+
+//CALL
+fn main() {
+  // Test cases
+  let s1 = "leetcode".to_string();
+  let t1 = "coats".to_string();
+  println!("Test Case 1: {}", Solution::min_steps(s1.clone(), t1.clone())); // Output: 7
+
+  let s2 = "night".to_string();
+  let t2 = "thing".to_string();
+  println!("Test Case 2: {}", Solution::min_steps(s2.clone(), t2.clone())); // Output: 0
 }
