@@ -18,6 +18,7 @@ for (let char of s) {
 }
 
 console.log(hash);
+
 Using a More Concise Approach
 In JavaScript, you don't have a built-in method like Ruby's Hash.new(0) or Python's defaultdict, but you can still achieve a concise version using the same logic:
 
@@ -57,8 +58,8 @@ for char in s:
     if char not in hash:
         hash[char] = 0
     hash[char] += 1
-JavaScript (longhand):
 
+JavaScript (longhand):
 
 let s = "example";
 let hash = {};
@@ -68,8 +69,8 @@ for (let char of s) {
     }
     hash[char] += 1;
 }
-Ruby (concise):
 
+Ruby (concise):
 
 myhash = Hash.new(0)
 s.each_char do |char|
