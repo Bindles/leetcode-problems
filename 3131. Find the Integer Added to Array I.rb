@@ -10,3 +10,9 @@ def added_integer(nums1, nums2)
     x.first.last - x.first.first
 end
 p added_integer(nums1, nums2)
+
+#* SOL 2 LOL
+def added_integer(nums1, nums2)
+  nums2.min - nums1.min
+end
+p added_integer(nums1, nums2)
