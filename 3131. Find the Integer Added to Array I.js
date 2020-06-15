@@ -1,6 +1,7 @@
 // 3131. Find the Integer Added to Array I
 nums1 = [2,6,4]; nums2 = [9,7,5]
 // nums1 = [10]; nums2 = [5]
+//LEARN => Math.min dont forget spread (...) => Math.min(...nums1)
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
