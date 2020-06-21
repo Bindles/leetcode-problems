@@ -13,3 +13,9 @@ impl Solution {
   }
 }
 
+// To test the function
+fn main() {
+  let nums1 = vec![1, 3, 2];
+  let nums2 = vec![4, 5, 6];
+  println!("{}", Solution::added_integer(nums1, nums2));  // Example output
+}
