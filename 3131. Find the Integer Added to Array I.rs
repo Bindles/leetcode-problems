@@ -3,19 +3,15 @@
 // nums1 = [10]; nums2 = [5]
 impl Solution {
   pub fn added_integer(mut nums1: Vec<i32>, mut nums2: Vec<i32>) -> i32 {
-      // Sort both input vectors
       nums1.sort();
       nums2.sort();
-      
-      // Calculate the difference between the first element of the sorted second vector
-      // and the first element of the sorted first vector
+
       nums2[0] - nums1[0]
   }
 }
 
-// To test the function
 fn main() {
   let nums1 = vec![1, 3, 2];
   let nums2 = vec![4, 5, 6];
-  println!("{}", Solution::added_integer(nums1, nums2));  // Example output
+  println!("{}", Solution::added_integer(nums1, nums2));
 }
